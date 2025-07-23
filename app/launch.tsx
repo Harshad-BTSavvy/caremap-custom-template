@@ -1,16 +1,17 @@
 import { Text } from "@/components/ui/text";
-import { useRouter } from "expo-router";
+import { ROUTES } from "@/utils/route";
+import { router } from "expo-router";
+
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
 
 const Launch = () => {
-  const router = useRouter();
 
   return (
     <View className="flex-1 items-center justify-center bg-[#DCFBFF]">
       <TouchableOpacity
         onPress={() => {
-          router.replace("/home");
+          router.replace(ROUTES.TAB1);
         }}
       >
         <Text
